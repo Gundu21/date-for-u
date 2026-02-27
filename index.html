@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Date For U</title>
+    <title>Important Question 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 15px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
-    <h1>It’s Working 🎉</h1>
-    <p>My site is live 💖</p>
+
+    <h1>Will you go on a date with me? 💕</h1>
+
+    <button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😜</button>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>Yayyyy! Can't wait for our date 😍💖</h1>";
+        }
+
+        function moveButton() {
+            const button = document.getElementById("noBtn");
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
 </body>
 </html>
